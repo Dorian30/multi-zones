@@ -8,12 +8,12 @@ const nextConfig = {
     return [
       {
         source: '/:di(\\$\\w*)',
-        destination: `${DI_URL}/:di`,
+        destination: `${DI_URL}/di/:di`,
         permanent: false
       },
       {
         source: '/:di(\\$\\w*)/:path*',
-        destination: `${DI_URL}/:di/:path*`,
+        destination: `${DI_URL}/di/:di/:path*`,
         permanent: false
       }
     ]
