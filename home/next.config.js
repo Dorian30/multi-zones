@@ -4,17 +4,19 @@ const { DI_URL } = process.env;
 
 const nextConfig = {
   reactStrictMode: true,
-  async redirects() {
+  async rewrites() {
     return [
       {
+        source: '/:path*',
+        destination: `/:path*`,
+      },
+      {
         source: '/:di(\\$\\w*)',
-        destination: `${DI_URL}/:di`,
-        permanent: false
+        destination: `${DI_URL}/di/:di`
       },
       {
         source: '/:di(\\$\\w*)/:path*',
-        destination: `${DI_URL}/:di/:path*`,
-        permanent: false
+        destination: `${DI_URL}/di/:di/:path*`
       }
     ]
   }
