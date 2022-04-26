@@ -11,12 +11,12 @@ const nextConfig = {
         destination: `/:path*`,
       },
       {
-        source: '/:di(\\$\\w*)',
-        destination: `${DI_URL}/di/:di`
+        source: '/di',
+        destination: `${DI_URL}/di`
       },
       {
-        source: '/:di(\\$\\w*)/:path*',
-        destination: `${DI_URL}/di/:di/:path*`
+        source: '/di/:path*',
+        destination: `${DI_URL}/di/:path*`
       }
     ]
   }
