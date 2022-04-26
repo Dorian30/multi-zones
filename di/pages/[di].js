@@ -4,5 +4,8 @@ export default function Home() {
   const router = useRouter()
   const { di } = router.query
 
-  return <div>{di}</div>;
+  return <div>
+    <p>Este es tu tag:</p>
+    <p>{di}</p>
+    </div>;
 }
